@@ -1,1 +1,1 @@
-# searching-cyber-vulns
+# CyberStudy
