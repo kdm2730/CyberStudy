@@ -1,7 +1,13 @@
 <h1>Welcome to the Vulnerability Searcher.</h1>
 <table border="1" style="width:100%">
+  <%= Vuls.find_each do |vul|  %>
   <tr>
-    <td>CVE-2015-6810!?!?</td>
+    <td><%= vul.name %></td>
+    <td><%= vul.description %></td>
+  </tr>
+  <% end %>
+  <tr>
+    <td>CVE-2015-6810</td>
     <td>Cross-site scripting (XSS) vulnerability in Invision Power Services IPS Community Suite (aka Invision Power Board, IPB, or Power Board) 4.x before 4.0.12.1 allows remote authenticated users to inject arbitrary web script or HTML via the event_location[address] array parameter to calendar/submit/.</td> 
   </tr>
   <tr>
