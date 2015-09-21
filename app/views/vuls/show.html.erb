@@ -1,4 +1,14 @@
 <center>
 	<H1><%= @vuls.name %></H1>
-	<H2><%= @vuls.description %></H2>
+	<H3><%= @vuls.description %></H3>
 </center>
+
+<table>
+	<td>
+		<tr>
+		<H3>Date discovered: <%= @vuls.datedisc %></H3>
+		<H3>Date fixed: <%= @vuls.datefixed %></H3>
+		<H3>Product releases around date: <%= @vuls.prodrels %></H3>
+		</tr>
+	</td>
+</table>
