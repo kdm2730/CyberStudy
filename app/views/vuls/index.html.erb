@@ -3,7 +3,7 @@
 <table border="1" style="width:100%">
   <%= Vuls.find_each do |vul|  %>
   <tr>
-    <td><%= vul.name %></td>
+    <td><a href=<%= vul.id %>><%= vul.name %></a></td>
     <td><%= vul.description %></td>
   </tr>
   <% end %>
