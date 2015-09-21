@@ -1,2 +1,11 @@
-<h1>Vuls#index</h1>
-<p>Find me in app/views/vuls/index.html.erb</p>
+<center>
+<H1>Table of Known Vulnerabilities</H1>
+<table border="1" style="width:100%">
+  <%= Vuls.find_each do |vul|  %>
+  <tr>
+    <td><%= vul.name %></td>
+    <td><%= vul.description %></td>
+  </tr>
+  <% end %>
+</table>
+</center>
