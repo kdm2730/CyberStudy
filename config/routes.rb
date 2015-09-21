@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'name/index'
+  get 'vuls/index'
 
   get 'welcome/index'
 
-  resources :name
+  resources :vuls
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
