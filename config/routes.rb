@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'name/index'
+
   get 'welcome/index'
 
   resources :name
