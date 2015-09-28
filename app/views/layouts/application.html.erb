@@ -9,13 +9,15 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Vulnerability Searcher</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
+
+    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
@@ -24,10 +26,13 @@
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <a class="navbar-brand" href="#">Project name</a>
+      <a class="navbar-brand" href="#">Vulerability Searcher</a>
       <ul class="nav nav-pills">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Known Vuls</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
@@ -39,11 +44,10 @@
     </nav>
 
     <div class="container">
-	<%= yield %>
-<!--      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
--->      </div>
+        
+      <div class="starter-template">
+        <%= yield %>
+      </div>
 
     </div><!-- /.container -->
 
