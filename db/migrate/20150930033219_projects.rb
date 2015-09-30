@@ -1,5 +1,5 @@
 class Projects < ActiveRecord::Migration
   def change
-    add_column :releases, array: true, default: []
+    add_column :news, :text, array: true
   end
 end
