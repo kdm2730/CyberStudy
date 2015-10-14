@@ -1,0 +1,11 @@
+<center>
+<H1>Table of Known Projects</H1>
+<table border="1" style="width:100%">
+  <%= Projects.find_each do |projects|  %>
+  <tr>
+    <td><a href=/projects/<%= projects.id %>><%= projects.name %></a></td>
+    <td><%= projects.description %></td>
+  </tr>
+  <% end %>
+</table>
+</center>
