@@ -16,9 +16,12 @@
         </div>
       </div>
     </li>
-
+    <% @counter = 1 %>
     <% Events.where(name: @projects.name).find_each do |event| %>
-        <li class="timeline-inverted">
+        <% if @counter % 2 == 1 %>
+          <% puts %><li class="timeline-inverted">
+          <% else %><li>
+        <% end %>
           <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
@@ -29,6 +32,7 @@
             </div>
           </div>
         </li>
+        <% @counter += 1 %>
     <% end %>
 
     <li>
