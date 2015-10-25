@@ -23,14 +23,14 @@
           <% puts %><li class="timeline-inverted">
           <% else %><li>
         <% end %>
-
+        <% @rand = (1...30).sort_by{rand}[1] %>
         <% if event.eventtype == "vulnerability" %>
           <% puts %><div class="timeline-badge danger">
-        <% elsif @counter % 5 == 1 %>
+        <% elsif @rand % 4 == 1 %>
           <%puts %><div class="timeline-badge success">
-        <% elsif @counter % 5 == 2 %>
+        <% elsif @rand % 4 == 2 %>
           <%puts %><div class="timeline-badge info">
-        <% elsif @counter % 5 == 3 %>
+        <% elsif @rand % 4 == 3 %>
           <%puts %><div class="timeline-badge warning">
         <% else %>
           <%puts %><div class="timeline-badge">
