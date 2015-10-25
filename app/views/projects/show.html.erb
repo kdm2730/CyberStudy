@@ -17,7 +17,8 @@
       </div>
     </li>
     <% @counter = 1 %>
-    <% Events.where(name: @projects.name).find_each do |event| %>
+    <% @array = Events.where(name: @projects.name).order(:date) %>
+    <% @array.each do |event| %>
         <% if @counter % 2 == 1 %>
           <% puts %><li class="timeline-inverted">
           <% else %><li>
