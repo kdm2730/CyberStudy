@@ -17,18 +17,18 @@
       </div>
     </li>
 
-    <% for @item in @projects.news %>
-    <li class="timeline-inverted">
-      <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-      <div class="timeline-panel">
-        <div class="timeline-heading">
-          <h4 class="timeline-title"><%= @item %></h4>
-        </div>
-        <div class="timeline-body">
-          <p>blah</p>
-        </div>
-      </div>
-    </li>
+    <% Events.where(name: @projects.name).find_each do |event| %>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"><%= event.title %></h4>
+            </div>
+            <div class="timeline-body">
+              <p><% event.description %></p>
+            </div>
+          </div>
+        </li>
     <% end %>
 
     <li>
