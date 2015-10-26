@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20151026032353) do
     t.date     "datedisc"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.text     "narrative"
   end
 
   create_table "vulnerabilities", force: :cascade do |t|
