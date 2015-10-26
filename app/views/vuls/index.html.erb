@@ -1,10 +1,11 @@
 <center>
 <H1>Table of Known Vulnerabilities</H1>
 <table border="1" style="width:100%">
-  <%= Vuls.find_each do |vul|  %>
+  <%= Vulnerability.find_each do |vul|  %>
   <tr>
     <td><a href=/vuls/<%= vul.id %>><%= vul.name %></a></td>
-    <td><%= vul.description %></td>
+    <td><%= vul.cvedescription %></td>
+    <td><%= vul.author %></td>
   </tr>
   <% end %>
 </table>

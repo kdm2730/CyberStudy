@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025162308) do
+ActiveRecord::Schema.define(version: 20151026032353) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contributors", force: :cascade do |t|
+    t.string   "author"
+    t.string   "cve"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "eventtype"
@@ -26,21 +33,27 @@ ActiveRecord::Schema.define(version: 20151025162308) do
     t.datetime "updated_at"
   end
 
-  create_table "events_bk", force: :cascade do |t|
-    t.string "type"
-    t.string "name"
-    t.date   "date"
-    t.string "title"
-    t.string "description"
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
     t.date     "datedisc"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.text     "news",        default: [],              array: true
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "narrative"
+  end
+
+  create_table "vulnerabilities", force: :cascade do |t|
+    t.string   "name"
+    t.date     "datedisc"
+    t.string   "cveid"
+    t.string   "vultype"
+    t.integer  "cvescore"
+    t.text     "cvedescription"
+    t.text     "pedescription"
+    t.text     "histnarrative"
+    t.string   "author"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "vuls", force: :cascade do |t|

@@ -4,7 +4,6 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.date :datedisc
-
       t.timestamps null: false
     end
   end
