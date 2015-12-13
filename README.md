@@ -15,10 +15,10 @@
 * heroku create --buildpack heroku/ruby
 * git init
 * git remote -v
-* heroku git:remote -a <heroku app name>
+* heroku git:remote -a \<heroku app name\>
 * git add .
 * git commit -am "make it better"
 * git push heroku master
 
 #### 5. Upload postgresql database with seed data
-* heroku pg:psql --app <heroku app name> < db_bkup
+* heroku pg:psql --app \<heroku app name\> \< db_bkup
