@@ -14,7 +14,8 @@
 
 * heroku create --buildpack heroku/ruby
 * git init
-* git remote -v* heroku git:remote -a <heroku app name>
+* git remote -v
+* heroku git:remote -a <heroku app name>
 * git add .
 * git commit -am "make it better"
 * git push heroku master
